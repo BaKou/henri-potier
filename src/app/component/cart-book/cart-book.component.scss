@@ -1,0 +1,29 @@
+.cartBook {
+  display: flex;
+  width: 100%;
+  height: 180px;
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+  }
+
+  img {
+    max-width: 100%;
+    width: 50%;
+  }
+
+  .book-info {
+    margin: 15px 0;
+  }
+
+  .quantity {
+    width: 75px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

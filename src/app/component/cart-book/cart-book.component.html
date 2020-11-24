@@ -1,0 +1,26 @@
+<div class="cartBook">
+  <div class="img-container">
+    <img
+      mat-card-image
+      [src]="cartItem.book.cover"
+      [alt]="cartItem.book.title"
+    />
+  </div>
+  <div class="book-info">
+    <h3>{{ cartItem.book.title }}</h3>
+    <div class="form-group">
+      <label>Quantité : </label>
+      <input
+        type="number"
+        [(ngModel)]="cartItem.quantity"
+        (change)="updateQuantity()"
+        class="quantity"
+      />
+    </div>
+    <p>
+      prix unitaire :
+      <span class="price">{{ cartItem.book.price | currency: "EUR" }}</span>
+    </p>
+    <button (click)="deleteItem(cartItem.book.isbn)">Supprimer</button>
+  </div>
+</div>

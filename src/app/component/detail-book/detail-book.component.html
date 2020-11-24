@@ -1,0 +1,14 @@
+<div class="detail-book">
+  <div>
+    <img [src]="book.cover" [alt]="book.title" />
+  </div>
+  <div class="book-info">
+    <h2>{{ book.title }}</h2>
+    <p *ngFor="let info of book.synopsis">
+      {{ info }}
+    </p>
+    <p class="price">{{ book.price | currency: "EUR" }}</p>
+    <button (click)="addtoCart(book)">Ajouter au panier</button>
+    <button routerLink="/home" class="back">Retour</button>
+  </div>
+</div>

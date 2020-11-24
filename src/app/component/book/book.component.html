@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <a routerLink="/detail/{{ book.isbn }}" (click)="$event.preventDefault()">
+    <div class="img-cover">
+      <img mat-card-image [src]="book.cover" [alt]="book.title" />
+    </div>
+    <mat-card-content>
+      <h3>{{ book.title }}</h3>
+      <p>
+        {{ (book.synopsis[0] | slice: 0:100) + "..." }}
+      </p>
+    </mat-card-content>
+  </a>
+  <mat-card-actions>
+    <div class="action">
+      <p class="price">{{ book.price | currency: "EUR" }}</p>
+      <button mat-button (click)="addtoCart(book)">ADD TO CART</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

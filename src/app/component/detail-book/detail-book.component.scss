@@ -1,0 +1,22 @@
+.detail-book {
+  display: flex;
+}
+
+.book-info {
+  margin-left: 15px;
+}
+
+img {
+  max-width: 500px;
+}
+
+.back {
+  background-color: grey;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .detail-book {
+    display: block;
+  }
+}

@@ -1,0 +1,20 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.price {
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

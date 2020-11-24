@@ -1,0 +1,28 @@
+<form class="searchform">
+  <input
+    type="text"
+    name="search"
+    class="input"
+    placeholder="Votre recherche..."
+    [(ngModel)]="searchText"
+    autocomplete="off"
+  />
+</form>
+
+<div *ngIf="bookList">
+  <h4 *ngIf="searchText">Résultat de recherche :</h4>
+
+  <mat-grid-list
+    cols="3"
+    rowHeight="650px"
+    gutterSize="30px"
+    class="container-grid"
+  >
+    <mat-grid-tile
+      *ngFor="let book of bookList | search: searchText"
+      class="tile"
+    >
+      <app-book [book]="book"></app-book>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

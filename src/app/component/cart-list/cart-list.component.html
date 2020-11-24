@@ -1,0 +1,7 @@
+<div *ngIf="cart.items" class="cart-list">
+  <mat-list>
+    <mat-list-item *ngFor="let cartItem of cart.items" class="tile">
+      <app-cart-book [cartItem]="cartItem"></app-cart-book>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,0 +1,16 @@
+<header>
+  <div class="brand">
+    <a routerLink="/home"><h5>La bibliothèque d'henri potier</h5></a>
+  </div>
+  <div class="nav">
+    <ul>
+      <li>
+        <a routerLink="/cart"
+          >panier<span class="badge" *ngIf="quantity > 0">{{
+            quantity
+          }}</span></a
+        >
+      </li>
+    </ul>
+  </div>
+</header>

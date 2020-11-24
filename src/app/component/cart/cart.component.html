@@ -1,0 +1,10 @@
+<app-cart-list [cart]="cart"></app-cart-list>
+<hr />
+<div class="pricing">
+  <p>
+    prix total ({{ cart.totalBook }} articles) :
+    {{ cart.totalPrice | currency: "EUR" }}
+  </p>
+  <p>remise: {{ cart.discount | currency: "EUR" }}</p>
+  <p>prix remisé : {{ cart.totalPrice - cart.discount | currency: "EUR" }}</p>
+</div>
